@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Mi Pueblo — Vida en Solitario</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="game"></div>
+<div id="loading"><div class="brand"><span>MI</span><b>PUEBLO</b></div><div class="loader"></div></div>
+<header class="topbar">
+  <div class="stat"><span class="ico">◷</span><b id="time">08:30</b><small id="day">LUN 1</small></div>
+  <div class="stat money"><span class="ico">$</span><b id="money">250</b></div>
+  <div class="stat"><span class="ico">♥</span><b id="energy">100%</b></div>
+  <div class="round" id="pause">Ⅱ</div>
+</header>
+<div id="quest" class="panel">
+  <div class="eyebrow">TU META</div><div id="questText">Gana tu primer sueldo</div>
+  <div class="progress"><i id="questBar"></i></div>
+</div>
+<div id="npcName"></div>
+<div id="prompt"><kbd>E</kbd><span id="promptText">Hablar</span></div>
+<div id="dialog" class="dialog hidden">
+  <div class="portrait" id="portrait">N</div><div class="bubble"><div class="npcTitle" id="npcTitle">Nora</div><div id="npcText"></div></div>
+  <button class="close" id="closeDialog">×</button>
+  <div id="choices"></div>
+</div>
+<div id="jobPanel" class="panel hidden"><button class="close jobClose">×</button><div class="eyebrow">TRABAJO</div><h2 id="jobTitle"></h2><p id="jobDesc"></p><div class="jobMeta"><div><small>PAGO</small><b id="jobPay"></b></div><div><small>ENERGÍA</small><b id="jobEnergy"></b></div></div><button id="jobAction" class="action">EMPEZAR</button></div>
+<div id="chat" class="chat hidden">
+  <div class="chatHead"><div><b id="chatName">Micrófono vecinal</b><small>Conversación libre</small></div><button id="closeChat">×</button></div>
+  <div id="messages" class="messages"><div class="msg bot">¿Qué quieres contarme? Puedes hablar o escribir.</div></div>
+  <div class="compose"><button id="mic" class="mic">●</button><input id="chatInput" placeholder="Escribe tu mensaje..." autocomplete="off"><button id="send" class="send">➤</button></div>
+</div>
+<button id="openChat" class="chatButton">Micrófono</button>
+<div id="toast"></div>
+<div class="controls"><button data-dir="up">▲</button><div><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div></div>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script type="module" src="game.js"></script>
+</body>
+</html>
